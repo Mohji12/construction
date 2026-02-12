@@ -1,0 +1,30 @@
+===========================================
+QUICK FIX - Copy and paste these commands
+===========================================
+
+# 1. Stop the backend (Press Ctrl+C in terminal running uvicorn)
+
+# 2. Install bcrypt
+pip install bcrypt
+
+# 3. Verify installation
+python -c "import bcrypt; print('bcrypt OK')"
+
+# 4. Restart backend
+uvicorn app.main:app --reload
+
+# 5. In a NEW terminal, add database column:
+mysql -h critical-classes.cnq64ucw4hew.ap-south-1.rds.amazonaws.com -P 3306 -u admin -p
+
+# When prompted, enter password: Critical#2025
+
+# Then run these SQL commands:
+USE jointly;
+ALTER TABLE users ADD COLUMN name VARCHAR(255) NOT NULL DEFAULT 'User' AFTER email;
+EXIT;
+
+# 6. Test signup at http://localhost:5173
+
+===========================================
+That's it! Signup should work after this.
+===========================================
