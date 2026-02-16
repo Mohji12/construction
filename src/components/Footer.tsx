@@ -22,7 +22,7 @@ const Footer = () => {
       links: [
         { label: "Terms of Service", href: "/legal/terms" },
         { label: "Privacy Policy", href: "/legal/privacy" },
-        { label: "GDPR Compliance", href: "/legal/gdpr" },
+        { label: "LegalAID", href: "/legal/legal-aid" },
       ],
     },
     {

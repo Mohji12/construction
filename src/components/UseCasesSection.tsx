@@ -4,7 +4,7 @@ import residentialVideo from "@/assets/residential.mp4";
 import commercialVideo from "@/assets/commercial.mp4";
 import industrialVideo from "@/assets/industrial.mp4";
 import interiorVideo from "@/assets/interior.mp4";
-import apartmentBuildingModel from "@/assets/apartment building 3d model.glb";
+import isometricCityGlobe from "@/assets/isometric+city+globe+3d+model.glb";
 import ThreeDModelViewer from "./ThreeDModelViewer";
 
 const useCases = [
@@ -136,11 +136,12 @@ const UseCasesSection = () => {
       ref={containerRef}
       className="relative min-h-screen flex flex-col items-center justify-center py-20 md:py-28"
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/20 to-background" />
+      <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/70 via-green-50/60 to-teal-50/70" />
+      <div className="absolute inset-0 jointlly-grid opacity-40" />
 
       {/* Header */}
       <motion.div
-        className="relative z-10 text-center px-6 mb-8 md:mb-12"
+        className="relative z-20 text-center px-6 mb-8 md:mb-12"
         style={{ opacity }}
       >
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
@@ -154,7 +155,7 @@ const UseCasesSection = () => {
       </motion.div>
 
       {/* Content area: 3x3 grid – four cards in corners, 3D in center with even gaps */}
-      <div className="relative w-full max-w-5xl mx-auto flex-1 grid grid-cols-3 grid-rows-3 gap-0 sm:gap-1 md:gap-2 lg:gap-3 min-h-[480px] md:min-h-[560px] lg:min-h-[640px] px-4 items-center justify-items-center">
+      <div className="relative z-20 w-full max-w-5xl mx-auto flex-1 grid grid-cols-3 grid-rows-3 gap-0 sm:gap-1 md:gap-2 lg:gap-3 min-h-[480px] md:min-h-[560px] lg:min-h-[640px] px-4 items-center justify-items-center">
         {/* Top-left */}
         <div className="w-full h-full min-h-[140px] flex items-end justify-end pr-0">
           <UseCaseCard useCase={useCases[0]} index={0} />
@@ -168,16 +169,19 @@ const UseCasesSection = () => {
         <div className="w-full h-full" />
         {/* Center 3D – larger size, blended background */}
         <motion.div
-          className="relative z-10 col-start-2 row-start-2 flex items-center justify-center w-full h-full"
+          className="relative z-10 col-start-2 row-start-2 flex items-center justify-center w-full h-full pb-8"
           animate={{ rotate: [-2, 2, -2] }}
           transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
         >
-          <div className="w-[280px] h-[200px] sm:w-[320px] sm:h-[220px] md:w-[380px] md:h-[260px] lg:w-[440px] lg:h-[300px] rounded-3xl overflow-hidden bg-background/30 backdrop-blur-md border border-white/10 shadow-2xl shadow-foreground/5">
-            <ThreeDModelViewer
-              src={apartmentBuildingModel}
-              alt="Apartment building 3D model"
-              className="w-full h-full"
-            />
+          <div className="w-[280px] h-[200px] sm:w-[320px] sm:h-[220px] md:w-[380px] md:h-[260px] lg:w-[440px] lg:h-[300px] rounded-3xl bg-background/30 backdrop-blur-md border border-white/10 shadow-2xl shadow-foreground/5 overflow-visible">
+            <div className="w-full h-full rounded-3xl overflow-hidden">
+              <ThreeDModelViewer
+                src={isometricCityGlobe}
+                alt="Isometric city globe 3D model"
+                className="w-full h-full"
+                transparent
+              />
+            </div>
           </div>
         </motion.div>
         <div className="w-full h-full" />

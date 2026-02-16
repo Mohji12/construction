@@ -55,6 +55,7 @@ const ThreeDModelViewer = ({ src, alt, className, transparent, id }: ThreeDModel
       disable-zoom={false}
       exposure="1"
       shadow-intensity="0.5"
+      shadow-softness="1"
       style={{
         width: "100%",
         height: "100%",
@@ -82,6 +83,7 @@ declare global {
         "disable-zoom"?: boolean;
         exposure?: string;
         "shadow-intensity"?: string;
+        "shadow-softness"?: string;
         class?: string;
       };
     }

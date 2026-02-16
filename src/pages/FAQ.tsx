@@ -177,6 +177,7 @@ const FAQ = () => {
     <div className="min-h-screen bg-background overflow-x-hidden">
       <Navbar />
       <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/70 via-green-50/60 to-teal-50/70" />
+      <div className="absolute inset-0 jointlly-grid opacity-40" />
       <div className="relative z-10 pt-24 md:pt-28 pb-16 md:pb-24">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div

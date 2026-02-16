@@ -122,9 +122,9 @@ const HeroSection = () => {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-            className="w-full lg:w-[45%] flex items-center justify-center lg:justify-end"
+            className="w-full lg:w-[45%] flex items-center justify-center lg:justify-end pb-8 overflow-visible"
           >
-            <div className="w-full max-w-[540px] lg:max-w-[600px] aspect-square relative lg:-translate-y-4">
+            <div className="w-full max-w-[540px] lg:max-w-[600px] aspect-square relative lg:-translate-y-4 overflow-visible">
               <ThreeDModelViewer
                 id={MODEL_VIEWER_ID}
                 src={isometricCityGlobe}

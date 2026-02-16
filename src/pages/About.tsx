@@ -101,7 +101,9 @@ const About = () => {
 
       {/* Stats Section */}
       <section className="relative py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/70 via-green-50/60 to-teal-50/70" />
+        <div className="absolute inset-0 jointlly-grid opacity-40" />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {stats.map((stat, index) => {
               const Icon = stat.icon;
@@ -130,7 +132,8 @@ const About = () => {
 
       {/* Mission Section */}
       <section className="relative py-20">
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/20 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/70 via-green-50/60 to-teal-50/70" />
+        <div className="absolute inset-0 jointlly-grid opacity-40" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -174,7 +177,9 @@ const About = () => {
 
       {/* Values Section */}
       <section className="relative py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/70 via-green-50/60 to-teal-50/70" />
+        <div className="absolute inset-0 jointlly-grid opacity-40" />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -216,7 +221,8 @@ const About = () => {
 
       {/* Team Section */}
       <section className="relative py-20">
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/20 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/70 via-green-50/60 to-teal-50/70" />
+        <div className="absolute inset-0 jointlly-grid opacity-40" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

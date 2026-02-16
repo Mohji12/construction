@@ -65,7 +65,9 @@ const sections = [
 
 const StorytellingSection = () => {
   return (
-    <section className="relative py-24 md:py-32 overflow-hidden bg-[#f7fef9]">
+    <section className="relative py-24 md:py-32 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/70 via-green-50/60 to-teal-50/70" />
+      <div className="absolute inset-0 jointlly-grid opacity-40" />
       <div className="relative z-10 max-w-6xl mx-auto px-6">
         {/* Section heading – big and centered like other sections */}
         <div className="text-center mb-12 md:mb-16">

@@ -8,6 +8,9 @@ import NotFound from "./pages/NotFound";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import FAQ from "./pages/FAQ";
+import Terms from "./pages/Terms";
+import Privacy from "./pages/Privacy";
+import Legal from "./pages/Legal";
 import Residential from "./pages/products/Residential";
 import Commercial from "./pages/products/Commercial";
 import Industrial from "./pages/products/Industrial";
@@ -45,6 +48,9 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/faq" element={<FAQ />} />
+          <Route path="/legal/terms" element={<Terms />} />
+          <Route path="/legal/privacy" element={<Privacy />} />
+          <Route path="/legal/legal-aid" element={<Legal />} />
 
           {/* Product pages */}
           <Route path="/products/residential" element={<Residential />} />

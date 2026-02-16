@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Palette, Layout, Zap, Layers, ArrowRight, CheckCircle2, Shield } from "lucide-react";
+import { Palette, Layout, Zap, Layers, ArrowRight, CheckCircle2, Shield, AlertCircle, XCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import interiorVideo from "@/assets/interior.mp4";
 
@@ -27,15 +27,6 @@ const Interior = () => {
       title: "Human-Centric Design",
       description: "Prioritizing ergonomics and psychological comfort to enhance the user experience.",
     },
-  ];
-
-  const benefits = [
-    "Transforms raw internal spaces into functional, high-value environments",
-    "Balances technical structural needs with modern design aesthetics",
-    "Optimizes spatial flow to maximize operational efficiency",
-    "Selects materials that meet durability requirements and design philosophies",
-    "Creates interiors that are both operationally efficient and aesthetically refined",
-    "Enhances user experience through ergonomic and psychological comfort",
   ];
 
   return (
@@ -113,7 +104,9 @@ const Interior = () => {
 
       {/* Overview Section */}
       <section className="relative py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/70 via-green-50/60 to-teal-50/70" />
+        <div className="absolute inset-0 jointlly-grid opacity-40" />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -124,15 +117,10 @@ const Interior = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               <span className="text-gradient-primary">Overview</span>
             </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+            <p className="text-lg text-muted-foreground leading-relaxed">
               Interior Architecture is the strategic process of transforming a building's internal volume into a functional, 
               high-value environment tailored to specific user needs. This discipline blends technical structural knowledge with 
               modern aesthetics to ensure that internal spaces are as operationally efficient as they are visually balanced.
-            </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Interior architecture transforms raw internal spaces into functional, high-value environments by balancing technical 
-              structural needs with modern design. This discipline focuses on optimizing spatial flow and material selection to create 
-              interiors that are both operationally efficient and aesthetically refined.
             </p>
           </motion.div>
         </div>
@@ -140,7 +128,8 @@ const Interior = () => {
 
       {/* Core Pillars */}
       <section className="relative py-20">
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/20 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/70 via-green-50/60 to-teal-50/70" />
+        <div className="absolute inset-0 jointlly-grid opacity-40" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -150,10 +139,10 @@ const Interior = () => {
             className="text-center mb-12"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              <span className="text-gradient-primary">Core Pillars</span>
+              <span className="text-gradient-primary">Key Components of Interior Architecture</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              To understand the discipline from a results-oriented perspective, it is broken down into four core pillars
+              To understand the discipline from a results-oriented perspective, it is broken down into four core pillars:
             </p>
           </motion.div>
 
@@ -181,111 +170,91 @@ const Interior = () => {
         </div>
       </section>
 
-      {/* Key Components */}
+      {/* Problem Context & Solution */}
       <section className="relative py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="glass-card p-8 md:p-12"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">
-              <span className="text-gradient-primary">Key Components</span>
-            </h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              {[
-                {
-                  title: "Spatial Flow Design",
-                  description: "Maximizing every square foot for its intended purpose through strategic layout planning",
-                },
-                {
-                  title: "System Integration",
-                  description: "Seamlessly managing lighting, acoustics, and climate control within architectural constraints",
-                },
-                {
-                  title: "Material Expertise",
-                  description: "Selecting finishes and furnishings that balance durability with design aesthetics",
-                },
-                {
-                  title: "User Experience Focus",
-                  description: "Creating environments that enhance both physical comfort and psychological well-being",
-                },
-              ].map((component, index) => (
-                <div
-                  key={index}
-                  className="p-6 rounded-xl bg-gradient-to-br from-primary/5 to-accent/5 border border-glass-border"
-                >
-                  <h3 className="text-lg font-semibold mb-3">{component.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{component.description}</p>
-                </div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Benefits */}
-      <section className="relative py-20">
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/20 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/70 via-green-50/60 to-teal-50/70" />
+        <div className="absolute inset-0 jointlly-grid opacity-40" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center mb-12"
+            className="glass-card p-8 md:p-10 border-l-4 border-purple-500"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              <span className="text-gradient-primary">Key Benefits</span>
-            </h2>
-          </motion.div>
+            {/* Problem Context */}
+            <div className="mb-8">
+              <div className="flex items-start gap-4 mb-6">
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center flex-shrink-0">
+                  <AlertCircle className="w-7 h-7 text-purple-500" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold mb-2 text-foreground">
+                    Problem Context (Regulatory-Safe Framing)
+                  </h3>
+                </div>
+              </div>
+              <p className="text-muted-foreground leading-relaxed ml-4 md:ml-6">
+                Interior design selection is often influenced by brand visibility rather than suitability. Pricing opacity and limited exposure to independent designers reduce informed choice, though execution responsibility remains entirely with the contracting parties.
+              </p>
+            </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="glass-card p-6 flex items-start gap-4"
-              >
-                <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                <p className="text-muted-foreground leading-relaxed">{benefit}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="relative py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="glass-card p-8 md:p-12 text-center bg-gradient-to-br from-primary/5 to-accent/5 border-primary/20"
-          >
-            <Shield className="w-16 h-16 text-primary mx-auto mb-6" />
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Transform Your Interior Space?
-            </h2>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Connect with expert interior architects who understand how to balance technical requirements with modern design 
-              to create spaces that are both beautiful and functional.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link to="/landowner" className="btn-premium flex items-center gap-2">
-                Get Started
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link to="/contact" className="btn-premium-outline flex items-center gap-2">
-                Contact Us
-              </Link>
+            {/* Jointlly's Solution */}
+            <div className="pt-8 border-t border-purple-500/20">
+              <h4 className="text-xl font-semibold mb-4 text-foreground flex items-center gap-2">
+                <CheckCircle2 className="w-6 h-6 text-green-500" />
+                Jointlly's Role & Solution
+              </h4>
+              <p className="text-muted-foreground mb-4">
+                Jointlly functions as a design discovery and comparison platform, helping owners explore a broader range of professionals and styles.
+              </p>
+              <p className="text-sm font-semibold text-foreground mb-3">The platform offers:</p>
+              <ul className="space-y-2 mb-4">
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-green-500 mt-1 flex-shrink-0" />
+                  <span className="text-sm text-muted-foreground">
+                    Designer and architect profiles with declared specialization areas and portfolio references
+                  </span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-green-500 mt-1 flex-shrink-0" />
+                  <span className="text-sm text-muted-foreground">
+                    Indicative scope-based pricing ranges (non-binding, non-contractual) to aid expectation setting
+                  </span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-green-500 mt-1 flex-shrink-0" />
+                  <span className="text-sm text-muted-foreground">
+                    Material and design preference visibility to support better alignment discussions
+                  </span>
+                </li>
+              </ul>
+              <div className="mt-4 p-3 rounded-lg bg-amber-500/10 border border-amber-500/20">
+                <p className="text-xs text-muted-foreground mb-2">
+                  <strong className="text-foreground">Jointlly does not:</strong>
+                </p>
+                <ul className="space-y-1 ml-4">
+                  <li className="flex items-start gap-2">
+                    <XCircle className="w-3 h-3 text-amber-500 mt-1 flex-shrink-0" />
+                    <span className="text-xs text-muted-foreground">Fix prices</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <XCircle className="w-3 h-3 text-amber-500 mt-1 flex-shrink-0" />
+                    <span className="text-xs text-muted-foreground">Endorse design outcomes</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <XCircle className="w-3 h-3 text-amber-500 mt-1 flex-shrink-0" />
+                    <span className="text-xs text-muted-foreground">Procure materials</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <XCircle className="w-3 h-3 text-amber-500 mt-1 flex-shrink-0" />
+                    <span className="text-xs text-muted-foreground">Manage execution or timelines</span>
+                  </li>
+                </ul>
+                <p className="text-xs text-muted-foreground mt-2">
+                  Final quotations, contracts, warranties, and site coordination are solely between the owner and the selected professional.
+                </p>
+              </div>
             </div>
           </motion.div>
         </div>

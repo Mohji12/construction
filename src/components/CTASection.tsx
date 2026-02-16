@@ -28,7 +28,8 @@ const CTASection = () => {
   return (
     <section className="relative py-32 overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-secondary/20 via-background to-background" />
+      <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/70 via-green-50/60 to-teal-50/70" />
+      <div className="absolute inset-0 jointlly-grid opacity-40" />
       
       {/* Glow effects */}
       <motion.div
@@ -57,7 +58,7 @@ const CTASection = () => {
         }}
       />
 
-      <div className="relative z-10 max-w-5xl mx-auto px-6">
+      <div className="relative z-20 max-w-5xl mx-auto px-6">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
